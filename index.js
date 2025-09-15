@@ -17,14 +17,14 @@ const app=express()
 const server=http.createServer(app)
 const io=new Server(server,{
      cors: {
-    origin: "https://zoko-frontend-git-master-rahulsharmas-projects-35683dac.vercel.app/", // production में specific domain डालना
+    origin: "https://zoko-frontend.vercel.app", // production में specific domain डालना
     methods: ["GET", "POST"],
     credentials: true  
   }
 })
 app.set("io", io);
 app.use(cors({
-    origin: "https://zoko-frontend-git-master-rahulsharmas-projects-35683dac.vercel.app/",
+    origin: "https://zoko-frontend.vercel.app",
     credentials:true
 }))
 app.use(express.json())
